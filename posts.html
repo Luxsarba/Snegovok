@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Все посты</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Все публикации</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+                <li><a href="about.html">О нас</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section id="all-posts">
+            <h2>Список постов</h2>
+            <div id="posts-list"></div>
+        </section>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            fetch("posts.json")
+                .then(response => response.json())
+                .then(posts => {
+                    const container = document.getElementById("posts-list");
+                    posts.reverse().forEach(post => {
+                        const postElement = document.createElement("div");
+                        postElement.classList.add("post-card");
+                        postElement.innerHTML = `
+                            <h3>${post.title}</h3>
+                            <p>${post.date}</p>
+                            ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ""}
+                            <p>${post.description}</p>
+                        `;
+                        container.appendChild(postElement);
+                    });
+                })
+                .catch(error => console.error("Ошибка загрузки постов:", error));
+        });
+    </script>
+</body>
+</html>
