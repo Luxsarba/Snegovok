@@ -23,25 +23,27 @@
         </section>
     </main>
     <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            fetch("posts.json")
-                .then(response => response.json())
-                .then(posts => {
-                    const container = document.getElementById("posts-list");
-                    posts.reverse().forEach(post => {
-                        const postElement = document.createElement("div");
-                        postElement.classList.add("post-card");
-                        postElement.innerHTML = `
-                            <h3>${post.title}</h3>
-                            <p>${post.date}</p>
-                            ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ""}
-                            <p>${post.description}</p>
-                        `;
-                        container.appendChild(postElement);
-                    });
-                })
-                .catch(error => console.error("Ошибка загрузки постов:", error));
-        });
+    document.addEventListener("DOMContentLoaded", () => {
+        fetch("posts.json")
+            .then(response => response.json())
+            .then(posts => {
+                const container = document.getElementById("posts-list");
+                posts.reverse().forEach(post => {
+                    const postElement = document.createElement("div");
+                    postElement.classList.add("post-card");
+                    postElement.innerHTML = `
+                        <h3>${post.title}</h3>
+                        <p>${post.date}</p>
+                        ${post.image ? `<img src="${post.image}" alt="${post.title}">` : ""}
+                        ${post.video ? `<video controls><source src="${post.video}" type="video/mp4"></video>` : ""}
+                        <p>${post.description}</p>
+                    `;
+                    container.appendChild(postElement);
+                });
+            })
+            .catch(error => console.error("Ошибка загрузки постов:", error));
+    });
     </script>
+
 </body>
 </html>
