@@ -6,6 +6,20 @@
         "image": "images/build1.png",
         "video": "videos/demo1.mp4",
         "description": "Описание билда, что изменилось, какие нововведения.",
-        "tags": ["билд", "новый функционал"]
+        "tags": [
+            "билд",
+            "новый функционал"
+        ]
+    },
+    {
+        "id": 2,
+        "title": "Наша команда",
+        "date": "2025-02-01",
+        "image": "images/team.png",
+        "video": "",
+        "description": "",
+        "tags": [
+            ""
+        ]
     }
 ]
