@@ -84,3 +84,12 @@ nav ul li a:hover {
         width: 100%;
     }
 }
+
+video {
+    max-width: 100%;  /* Ограничивает ширину видео */
+    height: auto;     /* Сохраняет пропорции видео */
+    display: block;   /* Убирает лишние отступы */
+    margin-bottom: 15px; /* Добавляет отступ снизу */
+}
+
+
