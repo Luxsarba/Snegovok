@@ -4,7 +4,7 @@
         "title": "Первый билд",
         "date": "2025-02-01",
         "image": "images/build1.png",
-        "video": "videos/demo1.mp4",
+        "video": "https://player.vimeo.com/video/1066324442",
         "description": "Описание билда, что изменилось, какие нововведения.",
         "tags": [
             "билд",
@@ -15,7 +15,7 @@
         "id": 2,
         "title": "Наша команда",
         "date": "2025-02-01",
-        "image": "images/team.png",
+        "image": "https://imgur.com/TkqaKV9",
         "video": "",
         "description": "",
         "tags": [

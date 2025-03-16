@@ -1,28 +1,49 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Грантовый проект</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ООО Снеговок</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Грантовый проект</h1>
-        <nav>
-            <ul>
-                <li><a href="index.html">Главная</a></li>
-                <li><a href="posts.html">Посты</a></li>
-                <li><a href="about.html">О нас</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <section id="latest-posts">
-            <h2>Последние публикации</h2>
-            <div id="posts-container"></div>
-        </section>
-    </main>
-    <script src="scripts.js"></script>
+  <header>
+    <h1>ООО Снеговок</h1>
+    <nav>
+      <ul>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="posts.html">Посты</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main style="display: flex; flex-wrap: wrap; gap: 2em; padding: 2em;">
+
+    <!-- Блок О нас -->
+    <section style="flex: 2; min-width: 300px;">
+      <h2>О нас</h2>
+      <p style="font-size: 1.1em; line-height: 1.6;">
+        <strong>ООО «Снеговок»</strong> — команда креативных энтузиастов, влюблённых в геймдизайн и нестандартные идеи.
+        Мы работаем над грантовым проектом, в котором совмещаем <em>атмосферу, юмор</em> и <em>механику</em> в уникальной игре.
+      </p>
+      <p style="font-size: 1.1em; line-height: 1.6;">
+        Главный герой — <strong>оживший карандаш</strong>, оказавшийся в запутанном офисе. Он ищет путь к свободе, попадая
+        в абсурдные ситуации, решая головоломки и оставляя за собой <em>след из творчества</em>.
+      </p>
+      <p style="font-size: 1.1em; line-height: 1.6;">
+        Мы верим, что <strong>игра — это искусство</strong>. И наша цель — подарить игроку не просто развлечение,
+        а настоящее приключение с душой.
+      </p>
+    </section>
+
+    <!-- Блок последних постов -->
+    <section style="flex: 1; min-width: 250px;">
+      <h2>Последние посты</h2>
+      <div id="latest-posts-preview"></div>
+    </section>
+
+  </main>
+
+  <script src="index_scripts.js"></script>
 </body>
 </html>
