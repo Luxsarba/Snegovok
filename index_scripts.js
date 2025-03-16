@@ -1,4 +1,4 @@
-fetch("posts.json")
+fetch("./posts.json")
   .then(response => response.json())
   .then(data => renderLatestPosts(data))
   .catch(error => console.error("Ошибка загрузки постов:", error));
