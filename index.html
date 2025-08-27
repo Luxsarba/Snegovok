@@ -1,49 +1,108 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ООО Снеговок</title>
-  <link rel="stylesheet" href="styles.css">
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>ООО Снеговок</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
+
+<!--Хедер-->
+<header>
     <h1>ООО Снеговок</h1>
     <nav>
-      <ul>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="posts.html">Посты</a></li>
-      </ul>
+        <ul>
+            <li><a href="index.html">Главная</a></li>
+        </ul>
     </nav>
-  </header>
+</header>
 
-  <main style="display: flex; flex-wrap: wrap; gap: 2em; padding: 2em;">
+<!--Баннер youtube канала-->
+<div class="channel-banner">
+    <img class="channel-avatar-large"
+         src="https://yt3.ggpht.com/wgxbzUI6-DkdSxxTYooY2v56J9xDslPU05yA2veyVRr2iPSaiUyrW0zbnojDBxj0UpPkk5k-6Z4=s176-c-k-c0x00ffffff-no-rj-mo"
+         alt="">
+    <div class="channel-banner-info">
+        <h2>Проект «Снеговок» </h2>
+        <p>Главный герой — оживший карандаш, оказавшийся в запутанном офисе. Он ищет путь к свободе, попадая в абсурдные
+            ситуации, решая головоломки и оставляя за собой след из творчества.</p>
+        <div class="channel-meta"></div>
+    </div>
+    <div class="channel-actions">
+        <a class="btn-secondary" href="https://www.youtube.com/channel/UC6Z8HkDHKuBlF_Lx0jOA9HA" target="_blank">YouTube
+            канал</a>
+    </div>
+</div>
 
-    <!-- Блок О нас -->
-    <section style="flex: 2; min-width: 300px;">
-      <h2>О нас</h2>
-      <p style="font-size: 1.1em; line-height: 1.6;">
-        <strong>ООО «Снеговок»</strong> — команда креативных энтузиастов, влюблённых в геймдизайн и нестандартные идеи.
-        Мы работаем над грантовым проектом, в котором совмещаем <em>атмосферу, юмор</em> и <em>механику</em> в уникальной игре.
-      </p>
-      <p style="font-size: 1.1em; line-height: 1.6;">
-        Главный герой — <strong>оживший карандаш</strong>, оказавшийся в запутанном офисе. Он ищет путь к свободе, попадая
-        в абсурдные ситуации, решая головоломки и оставляя за собой <em>след из творчества</em>.
-      </p>
-      <p style="font-size: 1.1em; line-height: 1.6;">
-        Мы верим, что <strong>игра — это искусство</strong>. И наша цель — подарить игроку не просто развлечение,
-        а настоящее приключение с душой.
-      </p>
+<main>
+
+    <!--О нас-->
+    <section>
+        <div class="about">
+            <h2>О нас</h2>
+            <p><strong>ООО «Снеговок»</strong> — команда креативных энтузиастов, влюблённых в геймдизайн и нестандартные
+                идеи. Мы работаем над грантовым проектом, совмещающим атмосферу, юмор и механику в уникальной игре.</p>
+            <p>Главный герой — оживший карандаш, оказавшийся в запутанном офисе. Он ищет путь к свободе, попадая в
+                абсурдные ситуации, решая головоломки и оставляя за собой след из творчества.</p>
+        </div>
+
+        <!-- Билд -->
+        <div class="build-card">
+            <div class="build-preview">
+                <img src="https://i.imgur.com/h7khZDj.png" alt="">
+            </div>
+            <div class="build-meta">
+                <div>
+                    <h3>Демо — Билд alpha v0.3</h3>
+                    <p>Открытый билд — можно скачать и попробовать на своём устройстве.</p>
+                    <div style="display:flex;gap:8px">
+                        <a href="./builds/karanDash_v0.3.exe" class="btn-secondary" download>
+                            Скачать
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+        <!--Посты и скрины-->
+        <h2>Посты и скриншоты</h2>
+        <div class="posts-grid">
+            <div id="posts-preview"></div>
+        </div>
     </section>
 
-    <!-- Блок последних постов -->
-    <section style="flex: 1; min-width: 250px;">
-      <h2>Последние посты</h2>
-      <div id="latest-posts-preview"></div>
-    </section>
+    <!--Последние посты-->
+    <aside>
+        <h2>Анонсы</h2>
+        <div id="announce-preview"></div>
+    </aside>
+</main>
 
-  </main>
+<footer>
+    <div>
+        <h3>Контакты</h3>
+        <p>
+            Кашун Вероника Максимовна<br>
+            <a href="mailto:veronika16.12.2002@mail.ru">veronika16.12.2002@mail.ru</a>
+        </p>
+    </div>
+    <div>
+        <h3>Фонд</h3>
+        <a href="https://fasie.ru/" target="_blank">
+            <img src="https://fasie.ru/local/templates/.default/markup/img/FASIE.SVG" style="width:180px">
+        </a>
+    </div>
+    <div>
+        <h3>Поддержка</h3>
+        <p style="color:var(--muted)">Работа выполнена при поддержке гранта Фонда содействия инновациям.</p>
+    </div>
+</footer>
 
-  <script src="index_scripts.js"></script>
+<!--Подключение скриптов-->
+<script defer src="index.js"></script>
+
 </body>
 </html>
